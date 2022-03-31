@@ -25,9 +25,12 @@ namespace Regex_Test
                 case 2:
                     Console.Write("Enter Last Name: ");
                     string Last_Name = Console.ReadLine();
-                    validation.Test_First(Last_Name);
+                    validation.Test_Last(Last_Name);
                     break;
                 case 3:
+                    Console.Write("Enter Email: ");
+                    string Email = Console.ReadLine();
+                    validation.Test_Email(Email);
                     break;
                 case 4:
                     break;
@@ -37,7 +40,6 @@ namespace Regex_Test
                     Console.WriteLine("Invalid Entry");
                     break;
             }
-
         }
     }
 }

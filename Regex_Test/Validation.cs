@@ -11,6 +11,7 @@ namespace Regex_Test
     {
         public Regex First_Name_Regex = new Regex(@"^[A-Z][A-Za-z]{2,}$");
         public Regex Last_Name_Regex = new Regex(@"^[A-Z][A-Za-z]{2,}$");
+        public Regex Email_Regex = new Regex(@"^[A-Za-z]+(.[A-Za-z])*@[a-z]+[.][a-z]{2,}([.][a-z]{2,})?$");   
 
         public void Test_First(string First_Name)
         {
@@ -23,6 +24,12 @@ namespace Regex_Test
             if (First_Name_Regex.IsMatch(Last_Name))
                 Console.WriteLine("Last Name is valid");
             else Console.WriteLine("Last Name is not valid");
+        }
+        public void Test_Email(string Email) // for abc.xyz@bl.co.in
+        {
+            if (Email_Regex.IsMatch(Email))
+                Console.WriteLine("Email is valid");
+            else Console.WriteLine("Email is not valid");
         }
     }
 }
