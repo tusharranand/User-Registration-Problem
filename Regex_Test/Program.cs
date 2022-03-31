@@ -18,6 +18,9 @@ namespace Regex_Test
             switch (Control)
             {
                 case 1:
+                    Console.Write("Enter First Name: ");
+                    string First_Name = Console.ReadLine();
+                    validation.Test_First(First_Name);
                     break;
                 case 2:
                     break;
