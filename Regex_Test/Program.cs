@@ -23,6 +23,9 @@ namespace Regex_Test
                     validation.Test_First(First_Name);
                     break;
                 case 2:
+                    Console.Write("Enter Last Name: ");
+                    string Last_Name = Console.ReadLine();
+                    validation.Test_First(Last_Name);
                     break;
                 case 3:
                     break;
