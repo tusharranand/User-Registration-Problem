@@ -38,6 +38,9 @@ namespace Regex_Test
                     validation.Test_Mobile(Mobile);
                     break;
                 case 5:
+                    Console.Write("Enter Password: ");
+                    string Password = Console.ReadLine();
+                    validation.Test_Pass(Password);
                     break;
                 default:
                     Console.WriteLine("Invalid Entry");
