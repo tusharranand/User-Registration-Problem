@@ -11,7 +11,8 @@ namespace Regex_Test
     {
         public Regex First_Name_Regex = new Regex(@"^[A-Z][A-Za-z]{2,}$");
         public Regex Last_Name_Regex = new Regex(@"^[A-Z][A-Za-z]{2,}$");
-        public Regex Email_Regex = new Regex(@"^[A-Za-z]+(.[A-Za-z])*@[a-z]+[.][a-z]{2,}([.][a-z]{2,})?$");   
+        public Regex Email_Regex = new Regex(@"^[A-Za-z]+(.[A-Za-z])*@[a-z]+[.][a-z]{2,}([.][a-z]{2,})?$");
+        public Regex Mobile_Regex = new Regex(@"^[0-9]{2}\s[0-9]{10}$");
 
         public void Test_First(string First_Name)
         {
@@ -21,7 +22,7 @@ namespace Regex_Test
         }
         public void Test_Last(string Last_Name)
         {
-            if (First_Name_Regex.IsMatch(Last_Name))
+            if (Last_Name_Regex.IsMatch(Last_Name))
                 Console.WriteLine("Last Name is valid");
             else Console.WriteLine("Last Name is not valid");
         }
@@ -30,6 +31,12 @@ namespace Regex_Test
             if (Email_Regex.IsMatch(Email))
                 Console.WriteLine("Email is valid");
             else Console.WriteLine("Email is not valid");
+        }
+        public void Test_Mobile(string Mobile)
+        {
+            if (Mobile_Regex.IsMatch(Mobile))
+                Console.WriteLine("Mobile Number is valid");
+            else Console.WriteLine("Mobile Number is not valid");
         }
     }
 }

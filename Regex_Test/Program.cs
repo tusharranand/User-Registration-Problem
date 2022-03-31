@@ -33,6 +33,9 @@ namespace Regex_Test
                     validation.Test_Email(Email);
                     break;
                 case 4:
+                    Console.Write("Enter Mobile Number: ");
+                    string Mobile = Console.ReadLine();
+                    validation.Test_Mobile(Mobile);
                     break;
                 case 5:
                     break;
