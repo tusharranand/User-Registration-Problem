@@ -13,7 +13,7 @@ namespace Regex_Test
         public Regex Last_Name_Regex = new Regex(@"^[A-Z][A-Za-z]{2,}$");
         public Regex Email_Regex = new Regex(@"^[A-Za-z]+(.[A-Za-z])*@[a-z]+[.][a-z]{2,}([.][a-z]{2,})?$");
         public Regex Mobile_Regex = new Regex(@"^[0-9]{2}\s[0-9]{10}$");
-        public Regex Password_Regex = new Regex(@"[(A-Z)+a-z]{8,}");
+        public Regex Password_Regex = new Regex(@"[A-Z][A-Za-z]{7,}");
 
         public void Test_First(string First_Name)
         {
