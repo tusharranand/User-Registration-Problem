@@ -19,31 +19,41 @@ namespace Regex_Test
         {
             if (First_Name_Regex.IsMatch(First_Name))
                 return "First Name is valid";
-            else return "First Name is not valid";
+            else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_FIRST_NAME, 
+                "\nMinimum length three characters \nFirst letter should be capital");
         }
         public string Test_Last(string Last_Name)
         {
             if (Last_Name_Regex.IsMatch(Last_Name))
                 return "Last Name is valid";
-            else return "Last Name is not valid";
+            else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_LAST_NAME, 
+                "\nMinimum length three characters \nFirst letter should be capital");
         }
         public string Test_Email(string Email) 
         {
             if (Email_Regex.IsMatch(Email))
                 return "Email is valid";
-            else return "Email is not valid";
+            else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_EMAIL, 
+                "\nMust start with a character or a number \nMust contain @ character " +
+                "\nAtleast one character should preceed @ \nMust contain period after @ " +
+                "\nAtleast one character between @ and period \nAtleast two characters " +
+                "after period");
         }
         public string Test_Mobile(string Mobile)
         {
             if (Mobile_Regex.IsMatch(Mobile))
                 return "Mobile Number is valid";
-            else return "Mobile Number is not valid";
+            else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_MOBILE_NUMBER, 
+                "\nFirst two digits must be country code \nFlollowed by a space \nFollowed by " +
+                "a ten digit number");
         }
         public string Test_Pass(string Password)
         {
             if (Password_Regex.IsMatch(Password))
                 return "Password is valid";
-            else return "Password is not valid";
+            else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_PASSWORD, 
+                "\nMinimum eight characters \nAtleast one Uppercase character \nAtleast one " +
+                "number \nFollowed by exactly one special character");
         }
     }
 }
