@@ -28,7 +28,7 @@ namespace TestProject
             catch (CustomExceptions ex)
             {
                 Assert.AreEqual("\nMinimum length three characters \nFirst letter should be " +
-                    "capital", ex.Message);
+                    "capital\n", ex.Message);
             }
         }
         [TestCase("Anand")]
@@ -43,7 +43,7 @@ namespace TestProject
             catch (CustomExceptions ex)
             {
                 Assert.AreEqual("\nMinimum length three characters \nFirst letter should be " +
-                    "capital", ex.Message);
+                    "capital\n", ex.Message);
             }
         }
         [TestCase("abc@yahoo.com")]
@@ -68,7 +68,7 @@ namespace TestProject
                 Assert.AreEqual("\nMust start with a character or a number \nMust contain @ " +
                     "character \nAtleast one character should preceed @ \nMust contain period " +
                     "after @ \nAtleast one character between @ and period \nAtleast two " +
-                    "characters after period", ex.Message);
+                    "characters after period\n", ex.Message);
             }
         }
         [TestCase("91 6642616716")]
@@ -83,7 +83,7 @@ namespace TestProject
             catch (CustomExceptions ex)
             {
                 Assert.AreEqual("\nFirst two digits must be country code \nFlollowed by a space " +
-                    "\nFollowed by a ten digit number", ex.Message);
+                    "\nFollowed by a ten digit number\n", ex.Message);
             }
         }
         [TestCase("ABCd6fg9#")]
@@ -98,7 +98,7 @@ namespace TestProject
             catch (CustomExceptions ex)
             {
                 Assert.AreEqual("\nMinimum eight characters \nAtleast one Uppercase character " +
-                    "\nAtleast one number \nFollowed by exactly one special character", ex.Message);
+                    "\nAtleast one number \nFollowed by exactly one special character\n", ex.Message);
             }
         }
     }

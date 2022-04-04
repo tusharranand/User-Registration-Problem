@@ -20,14 +20,14 @@ namespace Regex_Test
             if (First_Name_Regex.IsMatch(First_Name))
                 return "First Name is valid";
             else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_FIRST_NAME, 
-                "\nMinimum length three characters \nFirst letter should be capital");
+                "\nMinimum length three characters \nFirst letter should be capital\n");
         }
         public string Test_Last(string Last_Name)
         {
             if (Last_Name_Regex.IsMatch(Last_Name))
                 return "Last Name is valid";
             else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_LAST_NAME, 
-                "\nMinimum length three characters \nFirst letter should be capital");
+                "\nMinimum length three characters \nFirst letter should be capital\n");
         }
         public string Test_Email(string Email) 
         {
@@ -37,7 +37,7 @@ namespace Regex_Test
                 "\nMust start with a character or a number \nMust contain @ character " +
                 "\nAtleast one character should preceed @ \nMust contain period after @ " +
                 "\nAtleast one character between @ and period \nAtleast two characters " +
-                "after period");
+                "after period\n");
         }
         public string Test_Mobile(string Mobile)
         {
@@ -45,7 +45,7 @@ namespace Regex_Test
                 return "Mobile Number is valid";
             else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_MOBILE_NUMBER, 
                 "\nFirst two digits must be country code \nFlollowed by a space \nFollowed by " +
-                "a ten digit number");
+                "a ten digit number\n");
         }
         public string Test_Pass(string Password)
         {
@@ -53,7 +53,7 @@ namespace Regex_Test
                 return "Password is valid";
             else throw new CustomExceptions(CustomExceptions.exceptionType.INVALID_PASSWORD, 
                 "\nMinimum eight characters \nAtleast one Uppercase character \nAtleast one " +
-                "number \nFollowed by exactly one special character");
+                "number \nFollowed by exactly one special character\n");
         }
     }
 }
